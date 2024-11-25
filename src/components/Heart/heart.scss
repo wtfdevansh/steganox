@@ -1,0 +1,58 @@
+$colors: ( 
+  'o': transparent, 
+  'r': 'green'
+);
+
+//  Pixel Size
+$size: 5px !default;
+
+//  The matrix for the pixel art
+$pixel-heart: ( 
+        (o o r r o r r o o) 
+        (o r r r r r r r o) 
+        (o r r r r r r r o) 
+        (o o r r r r r o o) 
+        (o o o r r r o o o) 
+        (o o o o r o o o o)
+);
+
+//  Read matrix and pixelize
+@function pixelize($matrix, $size) {
+    $sh: '';
+    $rows: length($matrix);
+    @for $row from 1 through $rows {
+        $row-num: nth($matrix, $row);
+        @for $col from 1 through length($row-num) {
+            $dot: nth($row-num, $col);
+            $sh: $sh + ($size*$col) + ' ' + ($size*$row) + ' ' + map-get($colors, $dot); //  Add a comma after each drop-shadow except the last one
+            @if not ($col==length($row-num) and $row==$rows) {
+                $sh: $sh + ',';
+            }
+        }
+    }
+    @return unquote($sh);
+}
+
+
+.pixel-block {
+    margin-top: -20px;
+   
+    &_pixelized--heart {
+        height: $size*length($pixel-heart);
+        width: $size*length(nth($pixel-heart, 1));
+        &::after {
+            
+            height: $size;
+            width: $size;
+            content: '';
+            display: inline-block;
+            box-shadow: pixelize($pixel-heart, $size);
+        }
+    }
+}
+
+.heart-container{
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+}

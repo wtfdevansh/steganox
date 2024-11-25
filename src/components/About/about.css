@@ -1,0 +1,90 @@
+
+.aboutt {
+    font-size: 30px;
+    color: green;
+    text-align: center;
+    font-family: Lato, sans-serif;
+    font-weight: 900;
+    margin: 1rem 2rem 1rem 2rem;
+  }
+
+  .typewrite{
+    color: rgb(247, 253, 250);
+  }
+  
+  /* Typewriter effect 1 */
+  @keyframes typing {
+    0.0000%, 27.3488% { content: ""; }
+    1.1395%, 26.2093% { content: "s"; }
+    2.2791%, 25.0698% { content: "st"; }
+    3.4186%, 23.9302% { content: "ste"; }
+    4.5581%, 22.7907% { content: "steg"; }
+    5.6977%, 21.6512% { content: "stega"; }
+    6.8372%, 20.5116% { content: "stegan"; }
+    7.9767%, 19.3721% { content: "stegano"; }
+    
+  
+    30.7674%, 51.2791% { content: ""; }
+    31.9070%, 50.1395% { content: "s"; }
+    33.0465%, 49.0000% { content: "se"; }
+    34.1860%, 47.8605% { content: "sec"; }
+    35.3256%, 46.7209% { content: "secr"; }
+    36.4651%, 45.5814% { content: "secre"; }
+    37.6047%, 44.4419% { content: "secret"; }
+    38.6977%, 43.2093% { content: "secret "; }
+  
+  
+    58.6279%, 76.8605% { content: ""; }
+    59.7674%, 75.7209% { content: "t"; }
+    60.9070%, 74.5814% { content: "to"; }
+    62.0465%, 73.4419% { content: "too"; }
+    63.1860%, 72.3023% { content: "tool"; }
+    64.3256%, 71.1628% { content: "tool."; }
+  }
+  
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+  
+  .typewrite {
+    --caret: currentcolor;
+  }
+  
+  .typewrite::before {
+    content: "";
+    animation: typing 13.5s infinite;
+  }
+  
+  .typewrite::after {
+    content: "";
+    border-right: 1px solid var(--caret);
+    animation: blink 0.5s linear infinite;
+  }
+  
+  .typewrite.thick::after {
+    border-right: 1ch solid var(--caret);
+  }
+  
+  .typewrite.nocaret::after {
+    border-right: 0;
+  }
+  
+  
+  @media (prefers-reduced-motion) {
+    .typewrite::after {
+      animation: none;
+    }
+    
+    @keyframes sequencePopup {
+      0%, 100% { content: ""; }
+      25% { content: "stegano"; }
+      50% { content: "secret"; }
+      75% { content: "tool"; }
+    }
+  
+    .typewrite::before {
+      content: "";
+      animation: sequencePopup 12s linear infinite;
+    }
+  }

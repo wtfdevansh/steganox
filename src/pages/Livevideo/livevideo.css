@@ -1,0 +1,19 @@
+.containeref{
+    display:inline-flex;
+    flex-direction: row;
+    gap: 10px;
+    padding: 20px;
+    border-radius: 25px ;
+    border: 1px solid green;
+    justify-content: center;
+    align-items: center;
+    margin-top: 7%;
+}
+
+.imagepg{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}

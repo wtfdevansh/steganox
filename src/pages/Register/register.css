@@ -1,0 +1,161 @@
+.container{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 5px;
+
+    background-color: black;
+    border: solid green 1px;
+    color: green;
+
+    width: 400px;
+    height: 600px;
+    border-radius: 30px;
+
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 10vh;
+}
+
+.form-container{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input{
+    background-color: black;
+    border: solid green 1px;
+    color: white;
+
+    border-radius: 25px;
+    width: 300px;
+    height: 40px;
+    padding-left: 10px;
+}
+
+label{
+    display: block;
+    margin-bottom: 10px;
+}
+
+.specialLabel{
+    display: inline;
+}
+
+.specialInput{
+    border-radius: 10px;
+    width: 50px;
+}
+
+input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid green;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    margin-right: 2px;
+  }
+  
+ 
+  input[type="radio"]:checked {
+    background-color: #040404; 
+  }
+  
+  
+  input[type="radio"]:checked::before {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-color: green;
+    border-radius: 50%;
+    position: absolute;
+    top: 3.25px;
+    left: 3.25px;
+  }
+
+  .registerButton{
+    background-color: green;
+    color: black;
+    border: solid green 1px;
+    border-radius: 25px;
+    width: 300px;
+    height: 40px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 20px;
+  }
+
+ 
+
+  .secretInput{
+    position: absolute;
+    right: 0;
+    border: none;
+    /* display: none; */
+    /* width: 10px; */
+    
+   }
+
+ 
+
+
+  .taxi{
+    position:absolute;
+    top:-10px;
+    width:100%;
+    height:100%;
+    line-height:45px;
+    text-transform:uppercase;
+    color:#0e6b0e;
+    text-shadow:0 0 5px #149414,
+      0 0 15px #149414,
+      0 0 30px #149414;
+    transform-origin:bottom;
+    animation: animate 4s linear forwards;
+    z-index: -1;
+  }
+  
+  
+  
+  @keyframes animate{
+    
+    0%{
+      transform:translateY(0) scale(1);
+    }
+    
+    70%{
+      transform:translateY(200%) scale(1);
+    }
+    
+     100%{
+      transform:translateY(0) scale(1);
+    }
+    
+    
+  }
+
+  .gender{
+    display: flex;
+    flex-direction: row;
+    align-items:end;
+  }
+
+  input:hover{
+    border: solid rgb(7, 204, 7) 1px;
+  }
+
+  button:hover{
+    background-color: rgb(7, 204, 7);
+  }
+
+  

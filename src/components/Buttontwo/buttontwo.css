@@ -1,0 +1,11 @@
+.buttontwo{
+    background-color: black;
+    color: white;
+    border: solid green 1px;
+    border-radius: 25px;
+    width: 300px;
+    height: 40px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 20px;
+}

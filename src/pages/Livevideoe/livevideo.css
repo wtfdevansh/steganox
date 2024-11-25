@@ -1,0 +1,31 @@
+.other-container{
+    border-radius: 25px;
+    border: 1px solid green;
+    display:inline-flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.video-container{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    border: 1px solid green;
+    padding: 10px;
+   
+}
+
+.livevideo{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    justify-content: center;
+    align-items: center;
+}
+

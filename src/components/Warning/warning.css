@@ -1,0 +1,39 @@
+.warning{
+    border: 1px solid green;
+    display: inline-flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 25px;
+    font-size: larger;
+    position: absolute;
+    bottom: 80px;
+    right: 100px;
+   
+    
+}
+
+hr{
+    background-color: green;
+    height: 1px;
+    width: 100%;
+    border: none;
+}
+
+#error{
+    margin: 0px;
+    animation: blink 1s linear infinite;
+    color:rgb(237, 51, 51);
+}
+
+@keyframes blink {
+    0% { opacity: 1; } 
+    50% { opacity: 0; } 
+    100% { opacity: 1; }
+  }
+
+span{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 0.5px;
+}
+
+

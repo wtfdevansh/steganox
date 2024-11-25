@@ -1,0 +1,86 @@
+
+.about {
+    font-size: 30px;
+    color: green;
+    text-align: center;
+    font-family: Lato, sans-serif;
+    font-weight: 900;
+    margin: 1rem 2rem 1rem 2rem;
+  }
+
+  .typewriter{
+    color: rgb(234, 237, 234);
+  }
+  
+  /* Typewriter effect 1 */
+  @keyframes type {
+    0.0000%, 27.3488% { content: ""; }
+    1.1395%, 26.2093% { content: "e"; }
+    2.2791%, 25.0698% { content: "em"; }
+    3.4186%, 23.9302% { content: "emb"; }
+    4.5581%, 22.7907% { content: "embe"; }
+    5.6977%, 21.6512% { content: "embed"; }
+    6.8372%, 20.5116% { content: "embed."; }
+    7.9767%, 19.3721% { content: "embed.."; }
+    
+  
+    30.7674%, 51.2791% { content: ""; }
+    31.9070%, 50.1395% { content: "f"; }
+    33.0465%, 49.0000% { content: "fe"; }
+    34.1860%, 47.8605% { content: "fet"; }
+    35.3256%, 46.7209% { content: "fetc"; }
+    36.4651%, 45.5814% { content: "fetch"; }
+    37.6047%, 44.4419% { content: "fetch."; }
+    38.6977%, 43.2093% { content: "fetch.."; }
+  
+  
+    
+  }
+  
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+  
+  .typewriter {
+    --caret: currentcolor;
+  }
+  
+  .typewriter::before {
+    content: "";
+    animation: type
+     13.5s infinite;
+  }
+  
+  .typewriter::after {
+    content: "";
+    border-right: 1px solid var(--caret);
+    animation: blink 0.5s linear infinite;
+  }
+  
+  .typewriter.thick::after {
+    border-right: 1ch solid var(--caret);
+  }
+  
+  .typewriter.nocaret::after {
+    border-right: 0;
+  }
+  
+  
+  @media (prefers-reduced-motion) {
+    .typewriter::after {
+      animation: none;
+    }
+    
+    @keyframes sequencePopup {
+      0%, 100% { content: ""; }
+      25% { content: "stegano"; }
+      50% { content: "secret"; }
+      75% { content: "tool"; }
+    }
+  
+    .typewriter::before {
+      content: "";
+      animation: sequencePopup 1s linear infinite;
+    }
+  }

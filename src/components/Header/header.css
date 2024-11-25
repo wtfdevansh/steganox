@@ -1,0 +1,15 @@
+.heading{
+    width: 100%;
+    border-bottom: 1px solid green;
+    color: white;
+    height: fit-content;
+    padding: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    gap: 70%;
+    align-items: center;
+}
+
+.name{
+    margin: 0px;
+}

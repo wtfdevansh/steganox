@@ -1,0 +1,54 @@
+.upload-container{
+    border-radius: 25px;
+    border: 1px solid green;
+    display:inline-flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+input[type="file"]::file-selector-button {
+
+    background-color: green;
+
+    color: black;
+
+    border: none;
+
+    padding: 10px 20px;
+
+    border-radius: 25px;
+
+    cursor: pointer;
+
+}
+
+input[type = "file"]{
+    padding: 5px;
+}
+
+.uploadtxt{
+    font-size: large;
+    font-weight: 400;
+}
+
+.parentstill{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+}
+
+.outputText{
+    color: white;
+    width: 600px;
+    height: 200px;
+    border-radius: 25px;
+    border: 1px solid green;
+    padding: 20px;
+    
+}
+
